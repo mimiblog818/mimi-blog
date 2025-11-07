@@ -1,0 +1,137 @@
+* CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set default font family and size */
+body {
+  font-family: American Typewriter, serif;
+  font-size: 5vw;
+  font-color: blue;
+
+}
+a {
+  text-decoration: none;
+}
+
+
+/*写真の配列に対する操作*/
+
+html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+}
+.mainFooter {
+  background: brown;
+  position: absolute;
+  top: 50%;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-flow: column;
+}
+/*ブロック要素を横並びに*/
+.sideBySide {
+  display: flex;
+}
+
+.image-vw {
+  width: 100vw;
+}
+.image-vw2 {
+  width: 50vw;
+}
+img {
+  height: auto;
+}
+
+/*copyright*/
+.copyright {
+  font-size: 3vw;
+  text-align: center;
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* Insert the copyright symbol using ::before pseudo-element */
+.copyright::before {
+  content: "\00a9"; /* Unicode for copyright symbol */
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+
+
+/*Must use separated CSS file for アットマークtag*/
+/*PC設定*/
+@media screen and (min-aspect-ratio: 1/1) {
+  .image-vw {
+    max-width: 40%;
+    left: -75%;
+    transform: translateX(75%);
+  }
+  .image-vw2 {
+    max-width: 25%;
+    left: -95%;
+    transform: translateX(95%);
+    height: 20%;
+  }
+
+  body {
+    font-size: 2vw;
+  }
+  img {
+    max-width: 80vw;
+    height: auto;
+  }
+
+/*copyright*/
+.copyright {
+  font-size: 1vw;
+  text-align: center;
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  margin-bottom: 0;
+  }
+}
+
+
+.topFixed {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  }
+}
+

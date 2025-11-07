@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>2024~2025</title>
+  </head>
+  <body>
+    <div align="center">
+      <br /><br />
+      <br /><br /><br />
+      <div id="image-container"></div>
+
+      <div class="copyright">
+        minky qian 2025
+      </div>
+      <a href="works.html">Back</a>
+      <br /><br /><br /><br /><br />
+
+      <script>
+        const imageContainer = document.getElementById("image-container");
+        const numImages = 14;
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        for (let i = 1; i <= numImages; i++) {
+          const img = document.createElement("img");
+          img.src = `../images/2024_2025/${i}.jpg`;
+
+          // Apply different styles based on device type
+          if (screenWidth / screenHeight > 1 / 1) {
+            // PC
+            img.style.width = "auto";
+            img.style.height = "70vh";
+          } else {
+            // Phone
+            img.style.width = "100vw";
+            img.style.height = "auto";
+          }
+
+          imageContainer.appendChild(img);
+
+          for (let j = 0; j < 5; j++) {
+            const br = document.createElement("br");
+            imageContainer.appendChild(br);
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
